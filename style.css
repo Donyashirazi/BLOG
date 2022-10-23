@@ -1,0 +1,79 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 1536px;
+}
+body header {
+  background-color: #00abb3;
+  position: sticky;
+  top: 0;
+  min-height: 10vh;
+}
+body main {
+  background-color: #ffffff;
+  min-height: 80vh;
+}
+body main .mainContext .allCards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+body main .mainContext .allCards .firstCard,
+body main .mainContext .allCards .secondCard,
+body main .mainContext .allCards .thirdCard,
+body main .mainContext .allCards .fourthCard {
+  position: relative;
+  text-align: center;
+  color: white;
+  height: 60vh;
+  width: 40vh;
+  background-color: #b2b2b2;
+  margin: 20px 20px;
+  border-radius: 20px;
+}
+body main .mainContext .allCards .firstCard:hover,
+body main .mainContext .allCards .secondCard:hover,
+body main .mainContext .allCards .thirdCard:hover,
+body main .mainContext .allCards .fourthCard:hover {
+  opacity: 0.66;
+}
+body main .mainContext .allCards .firstCard img,
+body main .mainContext .allCards .secondCard img,
+body main .mainContext .allCards .thirdCard img,
+body main .mainContext .allCards .fourthCard img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  display: block;
+  border-radius: 20px;
+}
+body main .mainContext .allCards .firstCard .cardInfo,
+body main .mainContext .allCards .secondCard .cardInfo,
+body main .mainContext .allCards .thirdCard .cardInfo,
+body main .mainContext .allCards .fourthCard .cardInfo {
+  position: absolute;
+  right: 16%;
+  top: 16%;
+  height: 40vh;
+  width: 28vh;
+  max-width: 28vh;
+}
+body main .mainContext .allCards .firstCard .cardInfo ul,
+body main .mainContext .allCards .secondCard .cardInfo ul,
+body main .mainContext .allCards .thirdCard .cardInfo ul,
+body main .mainContext .allCards .fourthCard .cardInfo ul {
+  list-style-type: none;
+  margin-top: 100%;
+}
+body footer {
+  background-color: #b2b2b2;
+  min-height: 10vh;
+}
+
+/*# sourceMappingURL=style.css.map */

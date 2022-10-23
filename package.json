@@ -4,12 +4,20 @@
   "description": "Personal Blog",
   "main": "app.js",
   "scripts": {
+    "sass": "npx sass sample.scss style.css --watch ",
+    "app": "node app.js",
     "test": "prettier"
   },
   "repository": {
     "type": "git",
-    "url": "BLOG"
+    "url": "git+https://github.com/Donyashirazi/BLOG.git"
   },
   "author": "Donya",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "fontawesome": "^5.6.3",
+    "node.js": "^0.0.1-security",
+    "prettier": "^2.7.1",
+    "sass": "^1.55.0"
+  }
 }
