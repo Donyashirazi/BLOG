@@ -5,6 +5,10 @@
   margin: 20px 20px;
 }
 
+$headerColor: #7895b2;
+$mainColor: #f5efe6;
+$footerColor: #4c6793;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -13,58 +17,69 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 1536px;
+  margin: 0 auto;
 
   header {
-    background-color: #00abb3;
+    background-color: $headerColor;
     position: sticky;
     top: 0;
     min-height: 10vh;
   }
   main {
-    background-color: #ffffff;
+    background-color: $mainColor;
     min-height: 80vh;
 
     .mainContext {
       .allCards {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: center;
+        flex-wrap: wrap;
+        margin: 50px;
 
         .firstCard,
         .secondCard,
         .thirdCard,
         .fourthCard {
-          position: relative;
-          text-align: center;
-          color: white;
-          height: 60vh;
-          width: 40vh;
-          background-color: #b2b2b2;
-          margin: 20px 20px;
-          border-radius: 20px;
+          display: flex;
+          flex-direction: column;
+          width: 20vw;
+          min-width: 220px;
+          height: 66vh;
+          margin: 20px auto;
+          background-color: $headerColor;
+          border-radius: 10px;
+
           &:hover {
-            opacity: 0.66;
+            opacity: 0.5;
           }
 
           img {
-            height: 100%;
-            width: 100%;
-            object-fit: contain;
-            display: block;
-            border-radius: 20px;
+            height: 40vh;
+            width: 20vw;
+            min-width: 220px;
+            border-radius: 10px 10px 0px 0px;
+            margin: 0;
           }
           .cardInfo {
-            position: absolute;
-            right: 16%;
-            top: 16%;
-            height: 40vh;
-            width: 28vh;
-            max-width: 28vh;
+            padding: 10px;
 
+            p {
+              padding: 10px;
+              margin-bottom: 20px;
+            }
             ul {
               list-style-type: none;
-              margin-top: 100%;
+              display: inline;
+              padding: 10px;
+
+              li {
+                display: inline;
+                padding: 20px;
+              }
+
+              a {
+                color: rgb(44, 6, 6);
+              }
             }
           }
         }
@@ -72,7 +87,14 @@ body {
     }
   }
   footer {
-    background-color: #b2b2b2;
+    background-color: $footerColor;
     min-height: 10vh;
   }
+
+  // @media screen and (max-width: 800px) {
+  //   .allCards {
+  //     width: 10vw;
+  //     display: block;
+  //   }
+  // }
 }

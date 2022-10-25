@@ -7,72 +7,89 @@ body {
   display: flex;
   flex-direction: column;
   max-width: 1536px;
+  margin: 0 auto;
 }
 body header {
-  background-color: #00abb3;
+  background-color: #7895b2;
   position: sticky;
   top: 0;
   min-height: 10vh;
 }
 body main {
-  background-color: #ffffff;
+  background-color: #f5efe6;
   min-height: 80vh;
 }
 body main .mainContext .allCards {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
+  flex-wrap: wrap;
+  margin: 50px;
 }
 body main .mainContext .allCards .firstCard,
 body main .mainContext .allCards .secondCard,
 body main .mainContext .allCards .thirdCard,
 body main .mainContext .allCards .fourthCard {
-  position: relative;
-  text-align: center;
-  color: white;
-  height: 60vh;
-  width: 40vh;
-  background-color: #b2b2b2;
-  margin: 20px 20px;
-  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 20vw;
+  min-width: 220px;
+  height: 66vh;
+  margin: 20px auto;
+  background-color: #7895b2;
+  border-radius: 10px;
 }
 body main .mainContext .allCards .firstCard:hover,
 body main .mainContext .allCards .secondCard:hover,
 body main .mainContext .allCards .thirdCard:hover,
 body main .mainContext .allCards .fourthCard:hover {
-  opacity: 0.66;
+  opacity: 0.5;
 }
 body main .mainContext .allCards .firstCard img,
 body main .mainContext .allCards .secondCard img,
 body main .mainContext .allCards .thirdCard img,
 body main .mainContext .allCards .fourthCard img {
-  height: 100%;
-  width: 100%;
-  object-fit: contain;
-  display: block;
-  border-radius: 20px;
+  height: 40vh;
+  width: 20vw;
+  min-width: 220px;
+  border-radius: 10px 10px 0px 0px;
+  margin: 0;
 }
 body main .mainContext .allCards .firstCard .cardInfo,
 body main .mainContext .allCards .secondCard .cardInfo,
 body main .mainContext .allCards .thirdCard .cardInfo,
 body main .mainContext .allCards .fourthCard .cardInfo {
-  position: absolute;
-  right: 16%;
-  top: 16%;
-  height: 40vh;
-  width: 28vh;
-  max-width: 28vh;
+  padding: 10px;
+}
+body main .mainContext .allCards .firstCard .cardInfo p,
+body main .mainContext .allCards .secondCard .cardInfo p,
+body main .mainContext .allCards .thirdCard .cardInfo p,
+body main .mainContext .allCards .fourthCard .cardInfo p {
+  padding: 10px;
+  margin-bottom: 20px;
 }
 body main .mainContext .allCards .firstCard .cardInfo ul,
 body main .mainContext .allCards .secondCard .cardInfo ul,
 body main .mainContext .allCards .thirdCard .cardInfo ul,
 body main .mainContext .allCards .fourthCard .cardInfo ul {
   list-style-type: none;
-  margin-top: 100%;
+  display: inline;
+  padding: 10px;
+}
+body main .mainContext .allCards .firstCard .cardInfo ul li,
+body main .mainContext .allCards .secondCard .cardInfo ul li,
+body main .mainContext .allCards .thirdCard .cardInfo ul li,
+body main .mainContext .allCards .fourthCard .cardInfo ul li {
+  display: inline;
+  padding: 20px;
+}
+body main .mainContext .allCards .firstCard .cardInfo ul a,
+body main .mainContext .allCards .secondCard .cardInfo ul a,
+body main .mainContext .allCards .thirdCard .cardInfo ul a,
+body main .mainContext .allCards .fourthCard .cardInfo ul a {
+  color: rgb(44, 6, 6);
 }
 body footer {
-  background-color: #b2b2b2;
+  background-color: #4c6793;
   min-height: 10vh;
 }
 
