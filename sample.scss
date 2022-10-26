@@ -1,7 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
+
 @mixin allCards {
   height: 60vh;
   width: 40vh;
-  background-color: #b2b2b2;
+  background-color: #333333;
   margin: 20px 20px;
 }
 
@@ -10,6 +12,7 @@ $mainColor: #f5efe6;
 $footerColor: #4c6793;
 
 * {
+  font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   margin: 0;
 }
@@ -20,10 +23,33 @@ body {
   margin: 0 auto;
 
   header {
+    background: linear-gradient($headerColor, $mainColor);
     background-color: $headerColor;
     position: sticky;
     top: 0;
     min-height: 10vh;
+    display: flex;
+    flex-direction: row;
+
+    .leftImage {
+      height: 80px;
+      margin: auto 50px;
+    }
+    .rightImage {
+      height: 50px;
+      margin: 40px;
+      cursor: pointer;
+    }
+    .allLinks {
+      margin: auto;
+      margin-right: 50px;
+      a {
+        text-decoration: none;
+        color: black;
+        font-size: 1.5rem;
+        padding: 40px;
+      }
+    }
   }
   main {
     background-color: $mainColor;
@@ -45,12 +71,20 @@ body {
           width: 20vw;
           min-width: 220px;
           height: 66vh;
-          margin: 20px auto;
-          background-color: $headerColor;
+          margin: 10px auto;
+          background-color: #a3bdd8;
           border-radius: 10px;
 
           &:hover {
-            opacity: 0.5;
+            background-color: #7895b2;
+            opacity: 0.98;
+            box-shadow: 5px 0 10px 10px hsl(0deg, 0%, 40%);
+            transition: 0.8s;
+            color: rgb(15, 15, 15);
+            h2 {
+              color: #ffffff;
+              transition: 0.5s;
+            }
           }
 
           img {
@@ -63,6 +97,10 @@ body {
           .cardInfo {
             padding: 10px;
 
+            h2 {
+              text-align: center;
+            }
+
             p {
               padding: 10px;
               margin-bottom: 20px;
@@ -74,7 +112,7 @@ body {
 
               li {
                 display: inline;
-                padding: 20px;
+                padding: 16px;
               }
 
               a {

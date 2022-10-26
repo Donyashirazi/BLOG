@@ -1,4 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
 * {
+  font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
   margin: 0;
 }
@@ -10,10 +12,32 @@ body {
   margin: 0 auto;
 }
 body header {
+  background: linear-gradient(#7895b2, #f5efe6);
   background-color: #7895b2;
   position: sticky;
   top: 0;
   min-height: 10vh;
+  display: flex;
+  flex-direction: row;
+}
+body header .leftImage {
+  height: 80px;
+  margin: auto 50px;
+}
+body header .rightImage {
+  height: 50px;
+  margin: 40px;
+  cursor: pointer;
+}
+body header .allLinks {
+  margin: auto;
+  margin-right: 50px;
+}
+body header .allLinks a {
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+  padding: 40px;
 }
 body main {
   background-color: #f5efe6;
@@ -34,15 +58,26 @@ body main .mainContext .allCards .fourthCard {
   width: 20vw;
   min-width: 220px;
   height: 66vh;
-  margin: 20px auto;
-  background-color: #7895b2;
+  margin: 10px auto;
+  background-color: #a3bdd8;
   border-radius: 10px;
 }
 body main .mainContext .allCards .firstCard:hover,
 body main .mainContext .allCards .secondCard:hover,
 body main .mainContext .allCards .thirdCard:hover,
 body main .mainContext .allCards .fourthCard:hover {
-  opacity: 0.5;
+  background-color: #7895b2;
+  opacity: 0.98;
+  box-shadow: 5px 0 10px 10px hsl(0deg, 0%, 40%);
+  transition: 0.8s;
+  color: rgb(15, 15, 15);
+}
+body main .mainContext .allCards .firstCard:hover h2,
+body main .mainContext .allCards .secondCard:hover h2,
+body main .mainContext .allCards .thirdCard:hover h2,
+body main .mainContext .allCards .fourthCard:hover h2 {
+  color: #ffffff;
+  transition: 0.5s;
 }
 body main .mainContext .allCards .firstCard img,
 body main .mainContext .allCards .secondCard img,
@@ -59,6 +94,12 @@ body main .mainContext .allCards .secondCard .cardInfo,
 body main .mainContext .allCards .thirdCard .cardInfo,
 body main .mainContext .allCards .fourthCard .cardInfo {
   padding: 10px;
+}
+body main .mainContext .allCards .firstCard .cardInfo h2,
+body main .mainContext .allCards .secondCard .cardInfo h2,
+body main .mainContext .allCards .thirdCard .cardInfo h2,
+body main .mainContext .allCards .fourthCard .cardInfo h2 {
+  text-align: center;
 }
 body main .mainContext .allCards .firstCard .cardInfo p,
 body main .mainContext .allCards .secondCard .cardInfo p,
@@ -80,7 +121,7 @@ body main .mainContext .allCards .secondCard .cardInfo ul li,
 body main .mainContext .allCards .thirdCard .cardInfo ul li,
 body main .mainContext .allCards .fourthCard .cardInfo ul li {
   display: inline;
-  padding: 20px;
+  padding: 16px;
 }
 body main .mainContext .allCards .firstCard .cardInfo ul a,
 body main .mainContext .allCards .secondCard .cardInfo ul a,
