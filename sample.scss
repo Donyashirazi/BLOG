@@ -1,15 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
 
-@mixin allCards {
-  height: 60vh;
-  width: 40vh;
-  background-color: #333333;
-  margin: 20px 20px;
+@mixin flexCenter {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 $headerColor: #7895b2;
 $mainColor: #f5efe6;
-$footerColor: #4c6793;
+$footerColor: #b2cbf3;
 
 * {
   font-family: Arial, Helvetica, sans-serif;
@@ -24,7 +24,6 @@ body {
 
   header {
     background: linear-gradient($headerColor, $mainColor);
-    background-color: $headerColor;
     position: sticky;
     top: 0;
     min-height: 10vh;
@@ -32,22 +31,30 @@ body {
     flex-direction: row;
 
     .leftImage {
-      height: 80px;
+      height: 70px;
       margin: auto 50px;
     }
     .rightImage {
-      height: 50px;
-      margin: 40px;
+      height: 30px;
+      margin: 40px 30px;
       cursor: pointer;
     }
     .allLinks {
       margin: auto;
-      margin-right: 50px;
+      margin-right: 0px;
+
       a {
         text-decoration: none;
         color: black;
-        font-size: 1.5rem;
-        padding: 40px;
+        font-size: 1.2rem;
+        padding: 20px;
+      }
+    }
+    .hamburgerIcon {
+      margin: auto;
+      display: none;
+      a {
+        color: rgb(116, 116, 116);
       }
     }
   }
@@ -60,7 +67,7 @@ body {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        margin: 50px;
+        margin: 20px 50px;
 
         .firstCard,
         .secondCard,
@@ -71,7 +78,7 @@ body {
           width: 20vw;
           min-width: 220px;
           height: 66vh;
-          margin: 10px auto;
+          margin: 12px auto;
           background-color: #a3bdd8;
           border-radius: 10px;
 
@@ -122,17 +129,27 @@ body {
           }
         }
       }
+      .mainText {
+        align-items: center;
+        margin: 80px 80px;
+      }
     }
   }
   footer {
+    @include flexCenter();
     background-color: $footerColor;
     min-height: 10vh;
+    height: 20vh;
   }
 
-  // @media screen and (max-width: 800px) {
-  //   .allCards {
-  //     width: 10vw;
-  //     display: block;
-  //   }
-  // }
+  @media screen and (max-width: 600px) {
+    header {
+      .allLinks {
+        visibility: hidden;
+      }
+      .hamburgerIcon {
+        display: block;
+      }
+    }
+  }
 }
