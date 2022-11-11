@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu:wght@400;700&display=swap");
+@import url("./node_modules/font-awesome/css/font-awesome.min.css");
 * {
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
@@ -6,154 +7,189 @@
 }
 
 body {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   max-width: 1536px;
   margin: 0 auto;
+  justify-content: space-between;
 }
-body header {
+
+header {
   background: linear-gradient(#7895b2, #f5efe6);
   position: sticky;
   top: 0;
-  min-height: 10vh;
   display: flex;
   flex-direction: row;
+  z-index: 100;
 }
-body header .leftImage {
+
+.leftImage {
   height: 70px;
   margin: auto 50px;
 }
-body header .rightImage {
+
+.rightImage {
   height: 30px;
   margin: 40px 30px;
   cursor: pointer;
 }
-body header .allLinks {
+
+.allLinks {
   margin: auto;
   margin-right: 0px;
 }
-body header .allLinks a {
+.allLinks a {
   text-decoration: none;
   color: black;
   font-size: 1.2rem;
   padding: 20px;
 }
-body header .hamburgerIcon {
+
+.hamburgerIcon {
   margin: auto;
   display: none;
 }
-body header .hamburgerIcon a {
+.hamburgerIcon a {
   color: rgb(116, 116, 116);
 }
-body main {
+
+main {
   background-color: #f5efe6;
-  min-height: 80vh;
 }
-body main .mainContext .allCards {
+
+.allCards {
+  margin: 20px 0;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 20px 50px;
+  justify-content: center;
+  gap: 20px;
 }
-body main .mainContext .allCards .firstCard,
-body main .mainContext .allCards .secondCard,
-body main .mainContext .allCards .thirdCard,
-body main .mainContext .allCards .fourthCard {
+
+.card {
+  margin-top: 0;
   display: flex;
   flex-direction: column;
-  width: 20vw;
-  min-width: 220px;
-  height: 66vh;
-  margin: 12px auto;
   background-color: #a3bdd8;
   border-radius: 10px;
+  width: 20%;
 }
-body main .mainContext .allCards .firstCard:hover,
-body main .mainContext .allCards .secondCard:hover,
-body main .mainContext .allCards .thirdCard:hover,
-body main .mainContext .allCards .fourthCard:hover {
+.card:hover {
   background-color: #7895b2;
   opacity: 0.98;
-  box-shadow: 5px 0 10px 10px hsl(0deg, 0%, 40%);
   transition: 0.8s;
-  color: rgb(15, 15, 15);
 }
-body main .mainContext .allCards .firstCard:hover h2,
-body main .mainContext .allCards .secondCard:hover h2,
-body main .mainContext .allCards .thirdCard:hover h2,
-body main .mainContext .allCards .fourthCard:hover h2 {
-  color: #ffffff;
+.card:hover h2 {
+  color: aliceblue;
   transition: 0.5s;
 }
-body main .mainContext .allCards .firstCard img,
-body main .mainContext .allCards .secondCard img,
-body main .mainContext .allCards .thirdCard img,
-body main .mainContext .allCards .fourthCard img {
-  height: 40vh;
-  width: 20vw;
-  min-width: 220px;
-  border-radius: 10px 10px 0px 0px;
-  margin: 0;
+
+.image-div {
+  height: 200px;
 }
-body main .mainContext .allCards .firstCard .cardInfo,
-body main .mainContext .allCards .secondCard .cardInfo,
-body main .mainContext .allCards .thirdCard .cardInfo,
-body main .mainContext .allCards .fourthCard .cardInfo {
+.image-div img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px 10px 0 0;
+}
+
+.cardInfo {
   padding: 10px;
 }
-body main .mainContext .allCards .firstCard .cardInfo h2,
-body main .mainContext .allCards .secondCard .cardInfo h2,
-body main .mainContext .allCards .thirdCard .cardInfo h2,
-body main .mainContext .allCards .fourthCard .cardInfo h2 {
+.cardInfo p {
+  margin: 10px 6px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box !important;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  white-space: normal;
+}
+.cardInfo h2 {
   text-align: center;
 }
-body main .mainContext .allCards .firstCard .cardInfo p,
-body main .mainContext .allCards .secondCard .cardInfo p,
-body main .mainContext .allCards .thirdCard .cardInfo p,
-body main .mainContext .allCards .fourthCard .cardInfo p {
+.cardInfo ul {
   padding: 10px;
-  margin-bottom: 20px;
-}
-body main .mainContext .allCards .firstCard .cardInfo ul,
-body main .mainContext .allCards .secondCard .cardInfo ul,
-body main .mainContext .allCards .thirdCard .cardInfo ul,
-body main .mainContext .allCards .fourthCard .cardInfo ul {
   list-style-type: none;
-  display: inline;
-  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  overflow: hidden;
 }
-body main .mainContext .allCards .firstCard .cardInfo ul li,
-body main .mainContext .allCards .secondCard .cardInfo ul li,
-body main .mainContext .allCards .thirdCard .cardInfo ul li,
-body main .mainContext .allCards .fourthCard .cardInfo ul li {
-  display: inline;
-  padding: 16px;
-}
-body main .mainContext .allCards .firstCard .cardInfo ul a,
-body main .mainContext .allCards .secondCard .cardInfo ul a,
-body main .mainContext .allCards .thirdCard .cardInfo ul a,
-body main .mainContext .allCards .fourthCard .cardInfo ul a {
-  color: rgb(44, 6, 6);
-}
-body main .mainContext .mainText {
-  align-items: center;
-  margin: 80px 80px;
-}
-body footer {
+
+footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: #b2cbf3;
-  min-height: 10vh;
   height: 20vh;
 }
+
 @media screen and (max-width: 600px) {
-  body header .allLinks {
+  header .allLinks {
     visibility: hidden;
   }
-  body header .hamburgerIcon {
+  header .hamburgerIcon {
     display: block;
+  }
+}
+.new-blog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 80vw;
+  margin: 20px 60px;
+}
+.new-blog-container button {
+  width: 12vw;
+  margin: 4px;
+  display: block;
+  padding: 4px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.form-group label,
+.form-group input,
+.form-group textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 0.5rem;
+}
+.form-group input,
+.form-group textarea {
+  padding: 0.25rem 0.5rem;
+  font-size: 18px;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+@media screen and (max-width: 1100px) {
+  .card {
+    width: 30%;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .card {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 800px) {
+  .card {
+    width: 50%;
   }
 }
 
