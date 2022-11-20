@@ -58,6 +58,10 @@ main {
   background-color: #f5efe6;
 }
 
+.mainText {
+  margin: 2% 6%;
+}
+
 .allCards {
   margin: 20px 0;
   display: flex;
@@ -123,7 +127,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #b2cbf3;
+  background-color: #bed2f2;
   height: 20vh;
 }
 
